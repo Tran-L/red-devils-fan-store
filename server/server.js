@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
+const authRoutes = require("./routes/authRoutes");
 
 require("./db");
 
@@ -23,6 +24,8 @@ app.get("/api/health", (req, res) => {
         message: "Red Devils Fan Store API is running"
     });
 });
+
+app.use("/api/auth", authRoutes);
 
 app.use((req, res) => {
     res.status(404).json({
