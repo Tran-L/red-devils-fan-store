@@ -15,19 +15,9 @@ import CheckoutPage from "./pages/CheckoutPage";
 import OrderHistoryPage from "./pages/OrderHistoryPage";
 import OrderDetailPage from "./pages/OrderDetailPage";
 
-import "./App.css";
+import AdminDashboardPage from "./pages/AdminDashboardPage";
 
-const PlaceholderPage = ({ title, description }) => {
-  return (
-    <main className="page">
-      <section className="section-header">
-        <p className="eyebrow">Coming next</p>
-        <h1>{title}</h1>
-        <p className="muted">{description}</p>
-      </section>
-    </main>
-  );
-};
+import "./App.css";
 
 function App() {
   return (
@@ -94,10 +84,7 @@ function App() {
           path="/admin"
           element={
             <ProtectedRoute adminOnly>
-              <PlaceholderPage
-                title="Admin dashboard"
-                description="Stage 9 will add admin product, user, and order management."
-              />
+              <AdminDashboardPage />
             </ProtectedRoute>
           }
         />

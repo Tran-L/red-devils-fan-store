@@ -910,3 +910,174 @@
     grid-template-columns: 1fr;
   }
 }
+
+.admin-header {
+  margin-bottom: 1.5rem;
+}
+
+.admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+
+.admin-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid rgba(23, 23, 23, 0.12);
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  background: white;
+  color: #444;
+  font-weight: 900;
+}
+
+.admin-tabs button.active {
+  border-color: #be123c;
+  background: #be123c;
+  color: white;
+}
+
+.admin-section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.admin-form,
+.admin-table-card {
+  border: 1px solid rgba(23, 23, 23, 0.08);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 0 1rem 2.5rem rgba(24, 24, 27, 0.08);
+}
+
+.admin-form-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.admin-form-title h2,
+.admin-table-card h2 {
+  margin: 0;
+}
+
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.admin-form label {
+  display: grid;
+  gap: 0.45rem;
+  color: #333;
+  font-weight: 900;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-table select {
+  width: 100%;
+  border: 1px solid rgba(23, 23, 23, 0.14);
+  border-radius: 0.9rem;
+  padding: 0.8rem 0.9rem;
+  background: white;
+  outline: none;
+}
+
+.admin-form textarea {
+  resize: vertical;
+}
+
+.wide-field {
+  grid-column: span 2;
+}
+
+.admin-table-card {
+  overflow-x: auto;
+}
+
+.admin-table {
+  display: grid;
+  min-width: 760px;
+  margin-top: 1rem;
+}
+
+.admin-table-head,
+.admin-table-row {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.08);
+}
+
+.admin-table-head {
+  color: #666;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.admin-table-row:last-child {
+  border-bottom: none;
+}
+
+.product-row {
+  grid-template-columns: minmax(16rem, 1.4fr) 0.8fr 0.6fr 0.5fr 0.7fr;
+}
+
+.order-row-admin {
+  grid-template-columns: 0.4fr 1fr 0.6fr 0.8fr 1.4fr;
+}
+
+.user-row-admin {
+  grid-template-columns: 1fr 1.4fr 0.8fr 0.8fr 1fr;
+}
+
+.admin-product-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.admin-product-cell img {
+  width: 4rem;
+  height: 3.4rem;
+  border-radius: 0.8rem;
+  object-fit: cover;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.admin-table-row small {
+  display: block;
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wide-field {
+    grid-column: auto;
+  }
+
+  .admin-form-title {
+    flex-direction: column;
+  }
+}
