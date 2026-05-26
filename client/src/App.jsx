@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import AccountPage from "./pages/AccountPage";
+import ProductListPage from "./pages/ProductListPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import "./App.css";
 
 const PlaceholderPage = ({ title, description }) => {
@@ -29,22 +31,15 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
 
+        <Route path="/products" element={<ProductListPage />} />
+        <Route path="/products/:id" element={<ProductDetailPage />} />
+
         <Route
           path="/account"
           element={
             <ProtectedRoute>
               <AccountPage />
             </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/products"
-          element={
-            <PlaceholderPage
-              title="Product shop"
-              description="Stage 7 will connect this page to the product API with live search and product cards."
-            />
           }
         />
 
