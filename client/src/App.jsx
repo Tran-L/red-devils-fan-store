@@ -1,12 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
+
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import AccountPage from "./pages/AccountPage";
+
 import ProductListPage from "./pages/ProductListPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
+
+import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import OrderHistoryPage from "./pages/OrderHistoryPage";
+import OrderDetailPage from "./pages/OrderDetailPage";
+
 import "./App.css";
 
 const PlaceholderPage = ({ title, description }) => {
@@ -28,10 +36,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+
         <Route path="/login" element={<LoginPage />} />
+
         <Route path="/register" element={<RegisterPage />} />
 
         <Route path="/products" element={<ProductListPage />} />
+
         <Route path="/products/:id" element={<ProductDetailPage />} />
 
         <Route
@@ -47,10 +58,16 @@ function App() {
           path="/cart"
           element={
             <ProtectedRoute>
-              <PlaceholderPage
-                title="Shopping cart"
-                description="Stage 8 will display cart items, quantity controls, remove buttons, and checkout."
-              />
+              <CartPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/checkout"
+          element={
+            <ProtectedRoute>
+              <CheckoutPage />
             </ProtectedRoute>
           }
         />
@@ -59,10 +76,16 @@ function App() {
           path="/orders"
           element={
             <ProtectedRoute>
-              <PlaceholderPage
-                title="Order history"
-                description="Stage 8 will show the current user's previous orders."
-              />
+              <OrderHistoryPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/orders/:id"
+          element={
+            <ProtectedRoute>
+              <OrderDetailPage />
             </ProtectedRoute>
           }
         />
