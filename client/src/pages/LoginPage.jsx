@@ -99,7 +99,7 @@ const LoginPage = () => {
                 </div>
 
                 <p className="auth-switch">
-                    No account yet? <Link to="/register">Create one</Link>
+                    Haven't got an account yet? <Link to="/register">Create one</Link>
                 </p>
             </section>
         </main>
