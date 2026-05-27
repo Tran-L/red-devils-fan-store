@@ -113,12 +113,19 @@ const CheckoutPage = () => {
 
                     <label>
                         Payment method
-                        <input
+                        <select
                             name="paymentMethod"
                             value={formData.paymentMethod}
                             onChange={handleChange}
                             required
-                        />
+                        >
+                            <option value="Visa">Visa</option>
+                            <option value="MasterCard">MasterCard</option>
+                            <option value="PayPal">PayPal</option>
+                            <option value="Apple Pay">Apple Pay</option>
+                            <option value="Google Pay">Google Pay</option>
+                            <option value="Demo Card">Demo Card</option>
+                        </select>
                     </label>
 
                     <button className="btn btn-primary full-width" disabled={submitting}>

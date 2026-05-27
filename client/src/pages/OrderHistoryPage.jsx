@@ -58,7 +58,9 @@ const OrderHistoryPage = () => {
                                     <h2>${order.totalAmount.toFixed(2)}</h2>
                                 </div>
 
-                                <strong className="status-pill">{order.status}</strong>
+                                <strong className={`status-pill ${order.status.toLowerCase()}`}>
+                                    {order.status}
+                                </strong>
                             </div>
 
                             <p>{order.shippingAddress}</p>
