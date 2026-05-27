@@ -246,9 +246,9 @@ npm run init-db
 ```
 
 ## Admin account
-Email: admin@redstore.com
-Password: Admin123!
-Role: admin
+- Email: admin@redstore.com
+- Password: Admin123!
+- Role: admin
 
 Admin users can:
 - Add, edit, and delete products
@@ -258,9 +258,9 @@ Admin users can:
 
 
 ## Demo User Account
-Email: user@redstore.com
-Password: User123!
-Role: user
+- Email: user@redstore.com
+- Password: User123!
+- Role: user
 
 A Normal users can:
 - Browse products
